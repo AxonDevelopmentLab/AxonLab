@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="pt"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <title>Dashboard | AxonLab</title>
+    <link rel="icon" href="https://cdn.glitch.global/6bea35aa-2dd2-42fd-925f-1d9e75ab6a1e/WEBP_LogoRound.webp?v=1715472233307" type="image/x-icon">
+    <meta name="theme-color" content="#9e0236">
+  
+    <link rel="stylesheet" href="../styles/styles.css" media="screen">
+    <link rel="stylesheet" href="../styles/dashboard.css" media="screen">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    <script src="../script/global.js" defer></script>
+    <script src="../script/dashboard.js" defer></script>
+  
+    <meta name="title" content="AxonLab — Dashboard" />
+    <meta name="description" content="Gerencie os dados da sua conta pessoal nessa página." />
+    <meta property="og:description" content="Gerencie os dados da sua conta pessoal nessa página." />
+    <meta property="twitter:description" content="Gerencie os dados da sua conta pessoal nessa página." />
+  
+  <body class="u-body u-xl-mode" data-lang="pt">
+    <header class="u-clearfix u-header" id="sec-8ac9">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+        <a class="u-border-none u-btn u-btn-round u-button-style u-radius u-white u-btn-1" onclick="yourAccount()"><span class="u-file-icon u-icon u-icon-1"><img draggable="false" src="https://cdn.glitch.global/6bea35aa-2dd2-42fd-925f-1d9e75ab6a1e/WEBP_accountIcon.webp" alt=""> </span>SUA CONTA</a>
+        <a class="u-border-none u-btn u-btn-round u-button-style u-radius u-white u-btn-2" onclick="redirect('status')"><span class="u-file-icon u-icon u-icon-2"><img draggable="false" src="https://cdn.glitch.global/6bea35aa-2dd2-42fd-925f-1d9e75ab6a1e/WEBP_StatusIcon.webp" alt=""> </span>STATUS
+        </a><span class="u-file-icon u-icon u-icon-3"><img draggable="false" src="https://cdn.glitch.global/6bea35aa-2dd2-42fd-925f-1d9e75ab6a1e/WEBP_BrazilFlag.webp" alt="" style="cursor:pointer;" onclick="languageChange()"></span>
+        <img class="u-image u-image-contain u-image-default u-image-1" src="https://cdn.glitch.global/6bea35aa-2dd2-42fd-925f-1d9e75ab6a1e/WEBP_AxonLabLOGO.webp" alt="" style="cursor:pointer;" data-image-width="779" data-image-height="121" onclick="redirect('')">
+      </div>
+    </header>
+    <section class="u-clearfix u-custom-color-3 u-section-1" id="sec-a173">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-22 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-custom-color-6 u-layout-cell u-radius u-shape-round u-size-12-lg u-size-12-xl u-size-16-md u-size-16-sm u-size-16-xs u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h2 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default-xl u-text-1">SUA CONTA </h2>
+                  <p class="u-align-center u-text u-text-default u-text-2" style="cursor:pointer;color:#9d0839;" onclick="changePage('details')" id="item.details">DETALHES</p>
+                  <p class="u-align-center u-text u-text-default u-text-3" style="cursor:pointer" onclick="changePage('plan')" id="item.plan">ASSINATURA</p>
+                  <p class="u-align-center u-text u-text-default u-text-5">DETALHES</p>
+                  <p class="u-align-center u-text u-text-6" style="cursor:pointer" onclick="changePage('change_username')" id="item.change_username">ALTERAR NOME</p>
+                  <p class="u-align-center u-text u-text-default u-text-7" style="cursor:pointer" onclick="changePage('change_password')" id="item.change_password">ALTERAR SENHA </p>
+                  <p class="u-align-center u-text u-text-default u-text-7" style="cursor:pointer" onclick="changePage('change_email')" id="item.change_email">ALTERAR E-MAIL </p>
+                  <p class="u-align-center u-text u-text-default u-text-5">SEGURANÇA</p>
+                  <p class="u-align-center u-text u-text-default u-text-9" style="cursor:pointer" onclick="changePage('account_delete')" id="item.account_delete">DELETAR CONTA</p>
+                  <p class="u-align-center u-text u-text-default u-text-4" style="cursor:pointer" onclick="logout();">SAIR DA CONTA</p>
+                </div>
+              </div>
+              <div class="u-container-style u-custom-color-6 u-layout-cell u-radius u-shape-round u-size-44-md u-size-44-sm u-size-44-xs u-size-48-lg u-size-48-xl u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h2 class="u-align-left u-custom-font u-font-montserrat u-text u-text-default u-text-10" style="font-size:40px" id="title"><br></h2><br>
+                  <p class="u-align-left u-text u-text-default u-text-11" id="description"><br></p>
+                  <div class="u-container-style u-group u-shape-rectangle u-group-2" id="all_formulary" style="display:none;">
+                    <h5 class="u-align-left u-custom-font u-font-montserrat u-text u-text-default u-text-12" id="callback"><br></h5><br>
+                    <form class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 0px;"">
+                      <div class="u-form-group u-form-name u-label-none">
+                        <input type="text" placeholder="" id="field_1" class="u-border-custom-color-8 u-input u-input-rectangle u-none u-radius u-input-1">
+                      </div>
+                      <div class="u-form-email u-form-group u-label-none">
+                        <input type="text" placeholder="" id="field_2" class="u-border-custom-color-8 u-input u-input-rectangle u-none u-radius u-input-2" style="display:none">
+                      </div>
+                      <div class="u-form-email u-form-group u-label-none u-form-group-3">
+                        <input type="text" placeholder="" id="field_3" class="u-border-custom-color-8 u-input u-input-rectangle u-none u-radius u-input-3" style="display:none">
+                      </div>
+                      <div class="u-align-left u-form-group u-form-submit">
+                        <a class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-custom-color-8 u-radius u-btn-1" id="button" onclick="sendFormulary()">Enviar</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body></html>
